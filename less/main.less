@@ -7,6 +7,21 @@
 @medium-blue: #3872AC;
 @red: #E84945;
 @red-hover:  darken(@red, 10%);
+@off-white: #EBEBEB;
+
+.material-icons {
+  font-family: 'Material Icons';
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 
 body {
   font-size: 16px;
@@ -17,12 +32,18 @@ body {
 }
 
 h3 {
+  font-weight: 400;
+  color: @dark-blue;
+}
+
+h4 {
+  font-size: 1.5em;
   font-weight: 300;
 }
 
 button {
   width: auto;
-  font-size: 12px;
+  font-size: .8em;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px;
@@ -93,13 +114,6 @@ section {
   height: 350px;
 }
 
-#more-info {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 25%;
-}
-
 #call-to-action {
   height: 467px;
   button {
@@ -120,26 +134,12 @@ section {
     border-radius: 5px;
     padding: 20px;
     h4 {
-      font-size: 24px;
-      font-weight: 300;
       margin: 0;
     }
     p {
-      font-size: 12px;
+      font-size: .8em;
     }
   }
-}
-
-#add-features {
-  background-color:  @red;
-}
-
-.gradient-blue-red {
-  background:  @dark-blue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, @dark-blue, @red); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top right, @dark-blue, @red); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top right,  @dark-blue, @red); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to top right, @dark-blue, @red);
 }
 
 .owl-carousel {
@@ -153,6 +153,104 @@ section {
     }
   }
 }
+
+#more-info {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 25%;
+}
+
+#product-main {
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 5px 0;
+  }
+  .material-icons {
+    font-size: 50px;
+  }
+  .diagram-line {
+    align-items: center;
+    .circle {
+      border: 5px white solid;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+    }
+    .line {
+      border-top: 5px white solid;
+      height: 0px;
+      width: calc(60% - 30px);
+    }
+  }
+  .text {
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 0;
+    p {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+.gradient-blue-red {
+  background:  @dark-blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, @dark-blue, @red); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top right, @dark-blue, @red); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top right,  @dark-blue, @red); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, @dark-blue, @red);
+}
+
+#product-secondary {
+  background-color: @off-white;
+  height: 500px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 0;
+    margin: 0 auto;
+  }
+  p {
+    width: 60%;
+    font-weight: 300;
+    text-align: center;
+  }
+  .line {
+    border-top: 3px @red solid;
+    height: 0px;
+    width: 30px;
+  }
+}
+
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  button {
+    font-size: 1em;
+    width: 200px;
+  }
+  h3 {
+    text-align: center;
+  }
+}
+
+#add-features {
+  background-color:  @red;
+}
+
 
 footer {
   background-color: @charcoal;
