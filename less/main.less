@@ -4,6 +4,7 @@
 @sky-blue: #8DD2FF;
 @sky-blue-hover:  darken(@sky-blue, 10%);
 @dark-blue: #213C52;
+@dark-blue-hover: darken(@dark-blue, 10%);
 @medium-blue: #3872AC;
 @red: #E84945;
 @red-hover:  darken(@red, 10%);
@@ -249,6 +250,64 @@ section {
 
 #add-features {
   background-color:  @red;
+  color: white;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    width: 25%;
+    text-align: center;
+    h4 {
+      margin: 10px;
+    }
+    .material-icons {
+      font-size: 45px;
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 30px auto;
+  height: auto;
+  padding: 20px;
+  h4 {
+    margin: 0;
+  }
+  p {
+    font-weight: 300;
+  }
+  textarea,
+  input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    &:focus {
+      border-color: @medium-blue;
+      outline: none;
+      box-shadow: 0 1px 6px rgba(70, 127, 172, 0.3);
+    }
+  }
+  button {
+    background-color: @dark-blue;
+    width: 100%;
+    font-size: 14px;
+    padding: 1rem;
+    &:hover {
+      background-color: @dark-blue-hover;
+    }
+  }
 }
 
 
