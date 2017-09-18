@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "i": "^0.3.5",
-    "less-watch-compiler": "^1.8.0"
+    "less-watch-compiler": "^1.8.0",
+    "owl.carousel": "^2.2.0"
   }
 }
