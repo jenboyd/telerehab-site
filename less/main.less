@@ -88,8 +88,9 @@ header {
     }
     @media only screen and (max-width: 900px) {
       justify-content: center;
+      margin: 20px 0;
       img {
-        width: 300px;
+        width: 275px;
       }
     }
   }
@@ -130,7 +131,7 @@ header {
   	transition: 0.1s transform linear;
   	position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
   	height: 20px;
   	width: 30px;
   	z-index: 3;
@@ -141,9 +142,10 @@ header {
 }
 
 .bar {
-	background-color: white;
+	background-color: lighten(@charcoal, 20%);
 	width: 100%;
 	height: 3px;
+  border-radius: 5px;
 }
 
 .bar:nth-child(2) {
@@ -210,7 +212,7 @@ section {
     position: absolute;
     top: 375px;
     margin-left: 40px;
-    width: 350px;
+    width: 355px;
     text-align: center;
     background-color: rgba(255,255,255, 0.6);
     border-radius: 5px;
@@ -224,8 +226,8 @@ section {
     @media only screen and (max-width: 900px) {
       position: static;
       margin-left: 0px;
-      width: 80%;
-      margin: 0 auto;
+      width: 70%;
+      margin: 10px auto;
     }
   }
   @media only screen and (max-width: 900px) {
@@ -449,7 +451,7 @@ section {
     padding: 1.25rem 1rem;
     box-sizing: border-box;
     border-radius: 0.25rem;
-    border: 1px solid transparent;
+    border: .5px solid @off-white;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
     &:focus {
       border-color: @medium-blue;
@@ -520,11 +522,22 @@ footer {
     padding: 10px 20px;
     .logo {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
     .info {
-      margin: 20px;
+      margin: 25px;
       width: 100%;
+    }
+    .copyright {
+      align-items: flex-start;
+      width: 100%;
+      div {
+        flex-direction: column;
+        margin-bottom: 10px;
+        p {
+          margin: 0px;
+        }
+      }
     }
   }
 }
